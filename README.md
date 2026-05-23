@@ -1,10 +1,10 @@
-# Data and Supplementary Computational Records for MTS/RS Order-Tote-Robot Coordination
+# Data and Supplementary Materials for MTS/RS Order-Tote-Robot Coordination
 
 Author: Yuexin Kang
 
-This repository provides data, experimental tables, cleaned computational records, and implementation-oriented pseudocode for the numerical study on order-tote-robot coordination in multi-tote storage and retrieval systems with sequential picking stations.
+This repository provides the data files, tabulated numerical results, parameter settings, and implementation-oriented pseudocode for the study on order-tote-robot coordination in multi-tote storage and retrieval systems with sequential picking stations.
 
-The repository is organized around the experimental design of the study. It includes instance scale tables, generated instance data, parameter settings, tabulated experimental results, cleaned computational records, and detailed pseudocode for implementing the instance-generation and experimental workflows.
+The repository is organized around the computational study. It includes synthetic instance data, instance scale tables, experimental result tables, and detailed pseudocode for the instance-generation and experimental workflows.
 
 ## Repository Structure
 
@@ -14,14 +14,12 @@ data/
   generated_instances/
 
 results/
-  experimental_tables/
-  computational_records/
+  Overall Computational Results.xlsx
 
 docs/
   instance_generation.md
   parameter_settings.md
   experimental_workflow.md
-  repository_file_index.md
 
 pseudocode/
   01_instance_generation.md
@@ -43,20 +41,14 @@ The folder `data/generated_instances/` contains compact generated instance data,
 
 ## Experimental Results
 
-The folder `results/experimental_tables/` contains the tabulated experimental results from the numerical study, including the main comparison experiments, total-completion-time experiments, sensitivity analyses, and emergency-reservation experiments.
-
-The folder `results/computational_records/` contains cleaned computational records organized by experiment type. These records provide additional numerical details for the reported experiments.
+The file `results/Overall Computational Results.xlsx` provides the tabulated numerical results used in the computational study. The workbook includes the main comparison results, total-completion-time results, sensitivity analyses, and emergency-reservation results.
 
 ## Pseudocode and Experimental Workflow
 
-The folder `pseudocode/` provides detailed implementation-oriented pseudocode for the instance-generation procedure, integrated MILP workflow, DRL-HALNS workflow, baseline methods, main numerical experiments, sensitivity analyses, and emergency-reservation experiments.
+The folder `pseudocode/` provides implementation-oriented pseudocode for the instance-generation procedure, integrated MILP workflow, DRL-HALNS workflow, baseline methods, main numerical experiments, sensitivity analyses, and emergency-reservation experiments.
 
 These files describe the computational workflow at the level of data generation, algorithm execution, result recording, and result aggregation.
 
 ## Experimental Environment
 
 The numerical experiments were conducted on a Windows operating system with a 2.90 GHz CPU and 16 GB RAM. The MILP model was solved using Gurobi 10.0.1. PPO training for operator selection used Stable Baselines3 PPO 2.2.1. Additional parameter settings are provided in `docs/parameter_settings.md`.
-
-## File Index
-
-The file `docs/repository_file_index.md` provides an overview of the repository files and their contents.

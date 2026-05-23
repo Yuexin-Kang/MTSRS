@@ -31,7 +31,7 @@ The main performance metrics are objective value, runtime, feasibility status, o
 
 The total-completion-time experiments use the same modeling framework but replace the makespan objective with the sum of order completion times. The experiments evaluate whether the integrated decision approach remains effective under a cumulative order-completion metric.
 
-The output files include tabulated TCT results and cleaned computational records.
+The output files include tabulated TCT results.
 
 ## Sensitivity Analyses
 
@@ -58,6 +58,4 @@ Emergency orders arrive at a time determined by the emergency arrival-time ratio
 
 ## Result Recording and Aggregation
 
-Each experiment records instance metadata, algorithm settings, objective values, runtime, and experiment-specific metrics. Records are cleaned and organized by experiment type under `results/computational_records/`.
-
-Tabulated experimental results are provided under `results/experimental_tables/`.
+The numerical results are organized in `results/Overall Computational Results.xlsx`. The workbook contains the tabulated results for the main comparison experiments, total-completion-time experiments, sensitivity analyses, and emergency-reservation experiments.
