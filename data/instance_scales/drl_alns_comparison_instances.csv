@@ -1,0 +1,6 @@
+﻿experiment_group,instance_id,warehouse_layout,w_num,l_num,n_required_totes,orders_num,robot_num,picking_station_num,source
+DRL_HALNS_vs_ALNS,IV-1,5x5,5,5,30,30,10,6,Manuscript Table 8
+DRL_HALNS_vs_ALNS,IV-2,6x6,6,6,40,40,15,7,Manuscript Table 8
+DRL_HALNS_vs_ALNS,IV-3,7x7,7,7,50,50,20,8,Manuscript Table 8
+DRL_HALNS_vs_ALNS,IV-4,8x8,8,8,60,60,25,9,Manuscript Table 8
+DRL_HALNS_vs_ALNS,IV-5,9x9,9,9,70,70,30,11,Manuscript Table 8
