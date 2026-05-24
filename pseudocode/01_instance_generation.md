@@ -91,7 +91,9 @@ This file provides implementation-oriented pseudocode for generating the computa
       2. Repeat `c_i` times:
          1. Randomly sample an order `o` from the released order set.
          2. Set `IO[i, o] = 1`.
-   3. Compute `sumIO` as the total number of nonzero entries in `IO`.
+   3. Identify the active order indices associated with at least one required tote.
+   4. Record the active order indices as `source_order_indices` for export.
+   5. Compute `sumIO` as the total number of nonzero entries in `IO`.
 7. Generate conveyor-side parameters:
    1. Set the distance between consecutive picking stations.
    2. Set conveyor length.
@@ -139,7 +141,7 @@ This file provides implementation-oriented pseudocode for generating the computa
       3. Append the instance to `InstanceSet`.
 3. Return `InstanceSet`.
 
-## Procedure 4. Export Generated Instances
+## Procedure 4. Export Instance Files
 
 **Input**
 
@@ -148,17 +150,18 @@ This file provides implementation-oriented pseudocode for generating the computa
 
 **Output**
 
-- Machine-readable generated instance files.
+- Machine-readable exported instance files.
 
 **Steps**
 
 1. For each generated instance:
    1. Create a folder or file name based on `instance_id` and `seed`.
-   2. Export metadata, including scale group, layout indices, number of totes, number of orders, number of ACRs, number of picking stations, and seed.
-   3. Export the order-tote requirement matrix `IO`.
+   2. Export metadata, including scale group, layout indices, number of required totes, source-scale order count, number of active orders included in the file, number of ACRs, number of picking stations, and seed.
+   3. Export the active-order order-tote requirement matrix `IO`, together with `source_order_indices`.
    4. Export the conveyor-distance matrices `Dip` and `Dpi`.
    5. Export station processing times `p_i` and `p_max`.
-   6. Export robot-storage-side travel and service data, including distance matrix, travel-time matrix, service times, ready times, and time-window bounds where applicable.
-   7. Export parameter settings used to generate the instance.
-2. Store all generated instance files under the folder associated with the experiment type.
+   6. Export robot-storage-side node and service data, including task nodes, robot start nodes, service times, ready times, time-window bounds where applicable, and load-change values.
+   7. Record reconstruction notes for large travel-distance and travel-time matrices that can be reconstructed from the exported map parameters, node locations, robot speed, and service-time information.
+   8. Export parameter settings used to generate the instance.
+2. Store the exported instance files under the folder associated with the experiment type.
 3. Return the list of exported files.

@@ -27,7 +27,7 @@ The fast stage-wise baselines include:
 
 The main performance metrics are objective value, runtime, feasibility status, optimality status when applicable, and improvement ratios over baseline methods.
 
-Representative instance files for the main comparison experiments are provided in `data/representative_instances/`.
+Instance files for the main comparison experiments are provided in `data/representative_instances/`.
 
 ## Total-Completion-Time Experiments
 

@@ -4,7 +4,7 @@ Author: Yuexin Kang
 
 This repository provides data files, tabulated numerical results, parameter settings, and implementation-oriented pseudocode for the study on order-tote-robot coordination in multi-tote storage and retrieval systems with sequential picking stations.
 
-The repository is organized around the computational study. It includes instance scale tables, representative instance files, experimental result tables, and detailed pseudocode for the instance-generation and experimental workflows.
+The repository is organized around the computational study. It includes instance scale tables, instance files for the main comparison experiments, experimental result tables, and detailed pseudocode for the instance-generation and experimental workflows.
 
 ## Repository Structure
 
@@ -37,7 +37,7 @@ The computational instances are synthetic instances generated under fixed random
 
 The folder `data/instance_scales/` contains CSV files describing the instance scales and experiment grids used in the numerical study.
 
-The folder `data/representative_instances/` provides representative instance files for the main comparison experiments. These files include order-tote requirement matrices, conveyor-side parameters, station processing times, system parameters, layout information, task records, robot records, and node records.
+The folder `data/representative_instances/` provides instance files for the main comparison experiments. These files include order-tote requirement matrices, conveyor-side parameters, station processing times, system parameters, layout information, task records, robot records, and node records.
 
 ## Experimental Results
 
