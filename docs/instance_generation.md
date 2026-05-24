@@ -36,7 +36,7 @@ The layout information is used to generate storage locations, robot task nodes, 
 
 The order-tote requirement matrix is denoted by `IO`. The entry `IO[i][o]` equals 1 if tote `i` contains items required by order `o`, and 0 otherwise.
 
-For each tote, the generator randomly assigns the tote to one or two released order indices under a fixed random seed. The exported JSON files display the active order indices associated with at least one required tote. The field `source_order_indices` records the original order indices retained in the displayed matrix, `source_scale_orders_num` records the order-index count specified by the instance scale, and `orders_num_in_file` records the number of orders included in the displayed matrix. The resulting matrix defines the deterministic order-tote requirement parameter used by the optimization model and the heuristic algorithms.
+For each tote, the generator randomly assigns the tote to one or two released order indices under a fixed random seed. The exported JSON files display the active order indices associated with at least one required tote. The field `source_order_indices` records the original order indices retained in the displayed matrix, `source_scale_orders_num` records the order-index count specified by the instance scale, and `orders_num_in_file` records the number of orders included in the displayed matrix. The resulting matrix provides a deterministic order-tote requirement parameter that can be used by the optimization model and the heuristic algorithms.
 
 ## Conveyor-Side Parameters
 
