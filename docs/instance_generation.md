@@ -10,7 +10,7 @@ The instance-generation protocol has two levels. The first level defines the ins
 
 ## Instance Metadata
 
-Each generated instance is identified by the following fields:
+Each instance is identified by the following fields:
 
 | Field | Description |
 |---|---|
@@ -20,7 +20,7 @@ Each generated instance is identified by the following fields:
 | `w_num` | Width index of the warehouse layout. |
 | `l_num` | Length index of the warehouse layout. |
 | `n` | Number of required totes. |
-| `orders_num` | Number of released orders. |
+| `orders_num` | Number of released orders in the instance scale. |
 | `robot_num` | Number of ACRs. |
 | `picking_station_num` | Number of sequential picking stations. |
 
@@ -34,7 +34,7 @@ The layout information is used to generate storage locations, robot task nodes, 
 
 The order-tote requirement matrix is denoted by `IO`. The entry `IO[i][o]` equals 1 if tote `i` contains items required by order `o`, and 0 otherwise.
 
-For each tote, the generator randomly assigns the tote to one or two released orders under a fixed random seed. The resulting matrix defines the deterministic order-tote requirement parameter used by the optimization model and the heuristic algorithms.
+For each tote, the generator randomly assigns the tote to one or two released order indices under a fixed random seed. The resulting matrix defines the deterministic order-tote requirement parameter used by the optimization model and the heuristic algorithms.
 
 ## Conveyor-Side Parameters
 
@@ -76,6 +76,10 @@ The robot-storage-side data include:
 
 These fields define the robot routing and scheduling layer of each instance.
 
-## Generated Instance Files
+## Representative Instance Files
 
-Generated instance files are stored under `data/generated_instances/`. The instance records are provided in compact JSON format, with a manifest file that lists all exported instances. Each generated instance includes metadata, order-tote requirements, conveyor parameters, station processing times, and robot-storage-side node data. Large travel-distance and travel-time matrices are not stored directly, because they can be reconstructed from the exported map parameters and node locations.
+Representative instance files are stored under `data/representative_instances/`. The files are provided in JSON format and are organized by scale group for the main comparison experiments.
+
+Each representative instance includes metadata, order-tote requirements, conveyor parameters, station processing times, system parameters, layout information, task records, robot records, and node records. Large travel-distance and travel-time matrices are not stored directly, because they can be reconstructed from the exported map parameters and node locations.
+
+Only order indices associated with at least one required tote are included in the displayed order-tote matrix. The field `source_scale_orders_num` records the order-index count specified by the instance scale, and `orders_num_in_file` records the number of orders included in the representative instance file.

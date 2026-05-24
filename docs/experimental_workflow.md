@@ -11,7 +11,7 @@ The numerical study evaluates integrated order-tote-robot coordination in MTS/RS
 3. Sensitivity analyses on layout, workload, and resource parameters.
 4. Emergency-reservation experiments.
 
-All experiments use synthetically generated instances under fixed random seeds. Each algorithm is evaluated on the same generated instance data within each experiment group.
+All experiments use synthetically generated instances under fixed random seeds. Algorithms within the same experiment group are evaluated under the same instance-generation protocol and parameter settings.
 
 ## Main Comparison Experiments
 
@@ -26,6 +26,8 @@ The fast stage-wise baselines include:
 - A greedy baseline.
 
 The main performance metrics are objective value, runtime, feasibility status, optimality status when applicable, and improvement ratios over baseline methods.
+
+Representative instance files for the main comparison experiments are provided in `data/representative_instances/`.
 
 ## Total-Completion-Time Experiments
 

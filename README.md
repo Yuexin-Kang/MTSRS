@@ -2,16 +2,16 @@
 
 Author: Yuexin Kang
 
-This repository provides the data files, tabulated numerical results, parameter settings, and implementation-oriented pseudocode for the study on order-tote-robot coordination in multi-tote storage and retrieval systems with sequential picking stations.
+This repository provides data files, tabulated numerical results, parameter settings, and implementation-oriented pseudocode for the study on order-tote-robot coordination in multi-tote storage and retrieval systems with sequential picking stations.
 
-The repository is organized around the computational study. It includes synthetic instance data, instance scale tables, experimental result tables, and detailed pseudocode for the instance-generation and experimental workflows.
+The repository is organized around the computational study. It includes instance scale tables, representative instance files, experimental result tables, and detailed pseudocode for the instance-generation and experimental workflows.
 
 ## Repository Structure
 
 ```text
 data/
   instance_scales/
-  generated_instances/
+  representative_instances/
 
 results/
   Overall Computational Results.xlsx
@@ -35,9 +35,9 @@ pseudocode/
 
 The computational instances are synthetic instances generated under fixed random seeds. Each instance represents a wave-level order fulfillment problem in an MTS/RS with sequential picking stations. An instance is specified by the warehouse layout dimensions, the number of required totes, the number of released orders, the number of ACRs, and the number of picking stations.
 
-The folder `data/instance_scales/` contains instance scale tables for the main experiments, DRL-ALNS comparison, sensitivity analyses, and emergency-reservation experiments.
+The folder `data/instance_scales/` contains CSV files describing the instance scales and experiment grids used in the numerical study.
 
-The folder `data/generated_instances/` contains compact generated instance data, including instance metadata, order-tote requirement matrices, conveyor-side parameters, station processing times, robot-storage-side node information, and a manifest file for all exported instances.
+The folder `data/representative_instances/` provides representative instance files for the main comparison experiments. These files include order-tote requirement matrices, conveyor-side parameters, station processing times, system parameters, layout information, task records, robot records, and node records.
 
 ## Experimental Results
 
