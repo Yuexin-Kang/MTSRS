@@ -48,9 +48,8 @@ The main experiments use makespan as the baseline objective. Additional experime
 
 | Item | Setting |
 |---|---|
-| Operating system | Windows. |
-| CPU | 2.90 GHz. |
-| Memory | 16 GB RAM. |
+| Workstation | Windows operating system, 2.90 GHz CPU, 16 GB RAM. |
+| Server | Windows Server 2019 Standard, Intel Xeon Silver 4210R CPU at 2.40 GHz, 64 GB RAM. |
 | MILP solver | Gurobi 10.0.1. |
 
 ## DRL-HALNS Settings
