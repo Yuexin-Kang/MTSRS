@@ -51,4 +51,4 @@ These files describe the computational workflow at the level of data generation,
 
 ## Experimental Environment
 
-The numerical experiments were conducted on a Windows operating system with a 2.90 GHz CPU and 16 GB RAM. The MILP model was solved using Gurobi 10.0.1. PPO training for operator selection used Stable Baselines3 PPO 2.2.1. Additional parameter settings are provided in `docs/parameter_settings.md`.
+The numerical experiments were conducted on two computing environments: a Windows workstation equipped with a 2.90 GHz CPU and 16 GB of RAM, and a Windows Server 2019 machine with an Intel Xeon Silver 4210R CPU at 2.40 GHz and 64 GB RAM. The MILP model was solved using Gurobi 10.0.1. PPO training for operator selection used Stable Baselines3 PPO 2.2.1. Additional parameter settings are provided in `docs/parameter_settings.md`.
