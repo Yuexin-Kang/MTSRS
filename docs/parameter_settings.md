@@ -44,14 +44,6 @@ Two objectives are evaluated:
 
 The main experiments use makespan as the baseline objective. Additional experiments evaluate total completion time using the same modeling and experimental framework.
 
-## MILP Solver Environment
-
-| Item | Setting |
-|---|---|
-| Workstation | Windows operating system, 2.90 GHz CPU, 16 GB RAM. |
-| Server | Windows Server 2019 Standard, Intel Xeon Silver 4210R CPU at 2.40 GHz, 64 GB RAM. |
-| MILP solver | Gurobi 10.0.1. |
-
 ## DRL-HALNS Settings
 
 | Item | Setting |
