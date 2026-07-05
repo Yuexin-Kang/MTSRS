@@ -48,7 +48,3 @@ The file `results/Overall Computational Results.xlsx` provides the tabulated num
 The folder `pseudocode/` provides implementation-oriented pseudocode for the instance-generation procedure, integrated MILP workflow, DRL-HALNS workflow, baseline methods, main numerical experiments, sensitivity analyses, and emergency-reservation experiments.
 
 These files describe the computational workflow at the level of data generation, algorithm execution, result recording, and result aggregation.
-
-## Experimental Environment
-
-The numerical experiments were conducted on two computing environments: a Windows workstation equipped with a 2.90 GHz CPU and 16 GB of RAM, and a Windows Server 2019 machine with an Intel Xeon Silver 4210R CPU at 2.40 GHz and 64 GB RAM. The MILP model was solved using Gurobi 10.0.1. PPO training for operator selection used Stable Baselines3 PPO 2.2.1. Additional parameter settings are provided in `docs/parameter_settings.md`.
